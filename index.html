@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Petopia Clone</title>
+    <script src="https://kit.fontawesome.com/a84658a59e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+     .cart_menu{
+        min-width: 120px;
+     }
+      
+    </style>
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        <div class="container-fluid fw-bold fs-5">
+          <a class="navbar-brand p-3 "  href="#"><img src="https://html.merku.love/petopia/assets/images/logo/logo.svg" alt="logo" ></a>
+          
+          <div class=" d-flex align-items-center p-3  " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-5">
+                <li class="dropdown icon-link " style="--bs-link-color-rgb :144, 88, 211;">
+                    <a class="text-decoration-none dropdown-toggle icon-link-hover "  style="--bs-link-hover-color-rgb : 144, 88, 211;" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Home
+                    </a>
+                    <ul class="dropdown-menu p-2" >
+                      <li><a class="dropdown-item" href="#">Home 1</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Home 2</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown icon-link " style="--bs-link-color-rgb : 0, 0, 0;">
+            <a class="text-decoration-none dropdown-toggle icon-link-hover "  style="--bs-link-hover-color-rgb : 144, 88, 211;"   href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu p-2">
+                  <li><a class="dropdown-item" href="#">Our Service</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Service Details</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Our Gallery</a></li>
+                </ul>
+              </li>
+              <li class="dropdown icon-link " style="--bs-link-color-rgb : 0, 0, 0;">
+                <a class="text-decoration-none dropdown-toggle icon-link-hover"  style="--bs-link-hover-color-rgb : 144, 88, 211;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Shop
+                </a>
+                <ul class="dropdown-menu p-2">
+                  <li><a class="dropdown-item" href="#">Our Shop</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Shop Details</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Sales Page</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Shopping Cart</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Shipping Info</a></li>
+                </ul>
+              </li>
+              <li class="dropdown icon-link " style="--bs-link-color-rgb : 0, 0, 0;">
+                <a class="text-decoration-none dropdown-toggle icon-link-hover "  style="--bs-link-hover-color-rgb : 144, 88, 211;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Blog
+                </a>
+                <ul class="dropdown-menu p-2">
+                  <li><a class="dropdown-item" href="#">Our Blogs</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Blog Details</a></li>           
+                </ul>
+              </li>
+              <li class="dropdown icon-link " style="--bs-link-color-rgb : 0, 0, 0;">
+                <a class="text-decoration-none dropdown-toggle icon-link-hover "  style="--bs-link-hover-color-rgb : 144, 88, 211;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Pages
+                </a>
+                <ul class="dropdown-menu p-2">
+                  <li><a class="dropdown-item" href="#">About Us</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">FAQ</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Our Team</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+              
+          </div>
+          <div class="dropdown  "  >
+            <button class="cart_btn btn fw-bold" style="border-color: #9058d3; padding: 10px;" type="submit" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 <i class="fas fa-shopping-cart" style="color: #9058d3;" > </i> <span id="item-count"></span> Cart
+            </button>
+            <!-- <a class="text-decoration-none dropdown-toggle icon-link-hover "  style="--bs-link-hover-color-rgb : 144, 88, 211;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Pages
+              </a> -->
+            <ul class="dropdown-menu cart_menu p-4" style="position: absolute; left: -350px; top: 70px; ">
+                <div class="row align-items-center ">
+                  <div class="cart-item" style="font-weight:bold;"><span>Item Name</span><span>Quantity</span><span>Price</span></div>
+                  <div id="cart-items" ></div>
+
+                <div class="d-flex justify-content-between  " >
+                    <div style="font-weight: 600;">
+                        Total Price:
+                    </div>
+                    <div style="color: #9058d3;">
+                      $<span id="total-price">0.00</span>
+                    </div>
+                </div>
+                <li><hr class="dropdown-divider"></li>
+                  <button id="clear-cart"  class="btn  p-1 clear-cart" style="background-color:#9058d3 ; border-color:#9058d3; color: white; font-weight: bold;" type="submit">Clear Cart</button>
+              </ul>
+
+            </div>
+        </div>
+      </nav>
+      <div class="container " style="background-image: url(https://html.merku.love/petopia/assets/images/overlay/shapes_overlay_1.svg);">
+      <div style="position: absolute; top: 220px; right: -50px; z-index: -1;" >
+          <img  src="https://html.merku.love/petopia/assets/images/banner/cat_img_1.png" alt="cat_img_1">
+        </div>
+        <div class="container text-center "  >
+           <!-- <img src="https://html.merku.love/petopia/assets/images/banner/cat_img_1.png" alt="cat"> -->
+            <div class="banner_content " style="padding: 90px; ">
+                <h1 class="banner_title fw-bold" style="font-size:80px; ">The World's Best Team for Pet Care Services</h1>
+                <p class="banner_description px-5">Consequat nisl vel pretium lectus quam id leo in. Quis viverra nibh cras pulvinar mattis. Quis hendrerit dolor magna eget est lorem ipsum dolor</p>
+                <div class="p-3">
+                    <button class="btn fw-bold p-3 " style="background-color:#9058d3 ; border-color:#9058d3; color: white; font-size: x-large;" type="submit">
+                    <i class="fa-solid fa-paw" style="color: #f19009;"></i>
+                    Our Service</button></div>
+                    <div class="container text-center fw-bold p-5"  >
+                        
+                        <div class="row align-items-start justify-content-center " style="flex-wrap:wrap;">
+                            <div class="col" >
+                                <div class="card animate__animated animate__fadeInLeft animate__delay-1s">
+                                       <div class="card d-flex align-items-center gap-3  ">
+                                        <div  class="text-center p-3" style="padding: 5px; border-radius:100%; background-color: #d8e0e6; width: 25%;  margin-top: -10%;"><i class="fa-solid fa-cat fa-xl" style="color: #9058d3;"></i></div>                   
+                                       <h5 class="card-title fw-bold p-3">Vet Services</h5>
+                                       </div>
+                                    </div>
+                                
+                            </div>
+                            <div class="col" >
+                                <div class="card animate__animated animate__fadeInUp animate__delay-1s">
+                                    
+                                       <div class="card d-flex align-items-center gap-3  ">
+                                        <div  class="text-center p-3" style="padding: 5px; border-radius:100%; background-color: #d8e0e6; width: 25%;  margin-top: -10%;"><i class="fa-solid fa-bone fa-xl" style="color: #9058d3;"></i></div>                   
+                                       <h5 class="card-title fw-bold p-3">Special Care</h5>
+                                        </div>
+                                    
+                                    </div>
+                                
+                            </div>
+                            <div class="col" >
+                                <div class="card animate__animated animate__fadeInRight animate__delay-1s">
+                                       <div class="card d-flex align-items-center gap-3  ">
+                                        <div  class="text-center p-3" style="padding: 5px; border-radius:100%; background-color: #d8e0e6; width: 25%;  margin-top: -10%;"><i class="fa-solid fa-hand-holding-heart fa-xl" style="color: #9058d3;"></i></div>                   
+                                       <h5 class="card-title fw-bold p-3">High Quality</h5>
+                                       </div>
+                                    </div>
+                                
+                            </div>
+                        
+                      </div> 
+            </div>
+        </div>               
+      </div>
+      
+      <div class="product-cards">
+        <div class="product-card">
+          <div class="card-image"><img src="https://cdn.shopify.com/s/files/1/1653/5157/files/Walking-A-Dog_1024x1024.webp?v=1720076789" alt="Product Image"></div>
+          <h3>Daily Dog Walks</h3>
+          <p>Enjoy personalized walks for your furry friend.</p>
+          <p style="font-size:large;font-weight:600" data-price="19.99">$19.99<span style="text-decoration: line-through; font-size:medium;font-weight: lighter;">$25.99   </span></p>
+          <button onclick="itemCount(1)" class="btn fw-bold p-2 add-to-cart" style="background-color:#9058d3 ; border-color:#9058d3; color: white; font-size: medium;" >
+            <i class="fa-solid fa-cart-plus"></i>
+             Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="card-image"><img src="https://media.nomador.com/c5Jl47Y6bg1PqGTmSbf0XkqbRVsykGKtbOsbDBGooc8/rs:fill:500:350:1/g:ce/aHR0cHM6Ly9ub21hZG9yLXN0cmFwaS1wcm9kLnMzLmV1LWNlbnRyYWwtMS5hbWF6b25hd3MuY29tL0Fkb2JlX1N0b2NrXzIxMjEzOTIzOF85NTFhYjE1ZTNiLmpwZWc.jpg" alt="Product Image"></div>
+          <h3>In-Home Cat Care</h3>
+          <p>Reliable cat care, including feeding and playtime.</p>
+          <p style="font-size:large;font-weight:600" data-price="29.99">$29.99 <span style="text-decoration: line-through; font-size:medium;font-weight: lighter;">$45.99   </span></p>
+          <button onclick="itemCount(1)" class="btn fw-bold p-2 add-to-cart" style="background-color:#9058d3 ; border-color:#9058d3; color: white; font-size: medium;" type="submit">
+            <i class="fa-solid fa-cart-plus"></i>
+             Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="card-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL1HvaVVzNtWv6jNPmEC_m5F4DtMvuZ-PK9g&s" alt="Product Image"></div>
+          <h3>Pamper Your Pet</h3>
+          <p>Professional grooming services for all breeds.</p>
+          <p style="font-size:large;font-weight:600" data-price="17.99">$17.99 <span style="text-decoration: line-through; font-size:medium;font-weight: lighter;">$23.99   </span></p>
+          <button onclick="itemCount(1)" class="btn fw-bold p-2 add-to-cart" style="background-color:#9058d3 ; border-color:#9058d3; color: white; font-size: medium;" type="submit">
+            <i class="fa-solid fa-cart-plus"></i>
+             Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="card-image"><img src="https://smb.ibsrv.net/imageresizer/image/article_manager/1200x1200/19074/1169555/heroimage0.282673001717608609.jpg" alt="Product Image"></div>
+          <h3>Comfortable Boarding</h3>
+          <p>Safe and secure boarding for your pet.</p>
+          <p style="font-size:large;font-weight:600" data-price="30.99">$30.99 <span style="text-decoration: line-through; font-size:medium;font-weight: lighter;">$40.99   </span></p>
+          <button onclick="itemCount(1)" class="btn fw-bold p-2 add-to-cart" style="background-color:#9058d3 ; border-color:#9058d3; color: white; font-size: medium;" type="submit">
+            <i class="fa-solid fa-cart-plus"></i>
+             Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="card-image"><img src="https://5.imimg.com/data5/OY/DG/TN/SELLER-40103305/pet-moving-services-250x250.png" alt="Product Image"></div>
+          <h3>Reliable Pet Transport</h3>
+          <p>Stress-free transportation for your furry friend.</p>
+          <p style="font-size:large;font-weight:600" data-price="9.99">$9.99 <span style="text-decoration: line-through; font-size:medium;font-weight: lighter;">$15.99   </span></p>
+          <button onclick="itemCount(1)" class="btn fw-bold p-2 add-to-cart" style="background-color:#9058d3 ; border-color:#9058d3; color: white; font-size: medium;" type="submit">
+            <i class="fa-solid fa-cart-plus"></i>
+             Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="card-image"><img src="https://andreaarden.com/wp-content/uploads/2016/01/bg-puppy-training-part-1-2.jpg" alt="Product Image"></div>
+          <h3>Puppy Training Classes</h3>
+          <p>Positive reinforcement training for your new puppy.</p>
+          <p style="font-size:large;font-weight:600" data-price="12.99">$12.99 <span style="text-decoration: line-through; font-size:medium;font-weight: lighter;">$24.99   </span></p>
+          <button onclick="itemCount(1)"  class="btn fw-bold p-2 add-to-cart" style="background-color:#9058d3 ; border-color:#9058d3; color: white; font-size: medium;" type="submit">
+            <i class="fa-solid fa-cart-plus"></i>
+             Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="card-image"><img src="https://media.licdn.com/dms/image/sync/v2/D4E27AQGVCkIXJ1RofQ/articleshare-shrink_800/articleshare-shrink_800/0/1717423847034?e=2147483647&v=beta&t=7eG5B61eMZECmIgqMdDO8lIULZ_yFlqPrxR3LR4bovQ" alt="Product Image"></div>
+          <h3>Capture Your Pet's Personality</h3>
+          <p>Professional pet photography sessions.</p>
+          <p style="font-size:large;font-weight:600" data-price="5.99">$5.99 <span style="text-decoration: line-through; font-size:medium;font-weight: lighter;">$9.99   </span></p>
+          <button onclick="itemCount(1)" class="btn fw-bold p-2 add-to-cart" style="background-color:#9058d3 ; border-color:#9058d3; color: white; font-size: medium;" type="submit">
+            <i class="fa-solid fa-cart-plus"></i>
+             Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="card-image"><img src="https://itg-first-aid.com/Images/pet.jpg" alt="Product Image"></div>
+          <h3>Pet First Aid Course</h3>
+          <p>Learn essential first aid skills for your pet.</p>
+          <p style="font-size:large;font-weight:600" data-price="22.99">$22.99 <span style="text-decoration: line-through; font-size:medium;font-weight: lighter;">$29.99   </span></p>
+          <button onclick="itemCount(1)" class="btn fw-bold p-2 add-to-cart" style="background-color:#9058d3 ; border-color:#9058d3; color: white; font-size: medium;" type="submit">
+            <i class="fa-solid fa-cart-plus"></i>
+             Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="card-image"><img src="https://thumbs.dreamstime.com/b/fun-filled-pet-pool-party-dogs-various-breeds-happily-swimming-large-outdoor-328625810.jpg" alt="Product Image"></div>
+          <h3>Fun-Filled Pet Parties</h3>
+          <p>Celebrate with your furry friend and their pals.</p>
+          <p style="font-size:large;font-weight:600" data-price="13.99">$13.99 <span style="text-decoration: line-through; font-size:medium;font-weight: lighter;">$15.99   </span></p>
+          <button onclick="itemCount(1)" class="btn fw-bold p-2 add-to-cart" style="background-color:#9058d3 ; border-color:#9058d3; color: white; font-size: medium;" type="submit">
+            <i class="fa-solid fa-cart-plus"></i>
+             Add to Cart</button>
+        </div>
+        
+      </div>
+      
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
